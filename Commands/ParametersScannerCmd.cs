@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.Attributes;
@@ -36,7 +33,7 @@ namespace EngChallange
 
         #region GetByParameterName()
         /// <summary>
-        /// Retrieve a list of elements that have a specific parameter value.
+        /// Retrieve a list of elements that have a specific parameter name.
         /// </summary>
         public IList<Element> GetByParameterName(Document doc)
         {
@@ -71,6 +68,12 @@ namespace EngChallange
         #endregion
 
         #region SelectElementsWithParameter()
+        /// <summary>
+        /// Select elements with a specific paramater value or name
+        /// </summary>
+        /// <param name="doc">Current document</param>
+        /// <param name="uidoc">Current ui document</param>
+        /// <param name="elementsWithParameter">List of element with a specific parameter</param>
         public void SelectElementsWithParameter(Document doc, UIDocument uidoc, IList<Element> elementsWithParameter)
         {
             if (elementsWithParameter == null || !elementsWithParameter.Any())
@@ -87,10 +90,11 @@ namespace EngChallange
 
         #region GetByParameterValue()
         /// <summary>
-        /// Return all the parameter values  
-        /// deemed relevant for the given element
-        /// in string form.
+        /// Retrieve a list of elements that have a specific parameter value.
         /// </summary>
+        /// <param name="doc">Current document</param>
+        /// <param name="uidoc">Current ui document</param>
+        /// <returns>A list of elements that have a specific paramater value</returns>
         public IList<Element> GetByParameterValue(Document doc, UIDocument uidoc)
         {
             FilteredElementCollector c = new FilteredElementCollector(doc, doc.ActiveView.Id)
@@ -142,6 +146,11 @@ namespace EngChallange
         #endregion
                 
         #region IsolateSelectedElements()
+        /// <summary>
+        /// Isolate elements that have a specific id
+        /// </summary>
+        /// <param name="doc">Current document</param>
+        /// <param name="elements">List of elements to be isolated.</param>
         public void IsolateSelectedElements(Document doc, IList<Element> elements)
         {           
 

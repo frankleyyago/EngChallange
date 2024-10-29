@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 
@@ -22,9 +10,11 @@ namespace EngChallange
     /// </summary>
     public partial class UI : Window
     {
+        //Global variables.
         Document _doc;
         UIDocument _uidoc;
 
+        //Create a new instance of object.
         ParametersScannerCmd parametersScannerCmd = new ParametersScannerCmd();
 
         public UI(Document doc, UIDocument uidoc)
@@ -34,18 +24,13 @@ namespace EngChallange
             _uidoc = uidoc;
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Isolate_Click(object sender, RoutedEventArgs e)
         {
-            // Obtém os valores dos campos de texto
+            //Get UI values
             string parameterName = ParamaterNameTextBox.Text.Trim();
             string parameterValue = ParameterValueTextBox.Text.Trim();
 
-            // Verifica se o campo de nome do parâmetro foi preenchido
+            //Set the global variables and call SelectElementsWithParameter
             if (!string.IsNullOrEmpty(parameterName))
             {
                 parametersScannerCmd.SetTargetParameterName(parameterName);
@@ -53,7 +38,7 @@ namespace EngChallange
                 parametersScannerCmd.IsolateSelectedElements(_doc, elementsWithParameter);
             }
 
-            // Verifica se o campo de valor do parâmetro foi preenchido
+            //Set the global variables and call GetByParameterValue
             if (!string.IsNullOrEmpty(parameterValue))
             {
                 parametersScannerCmd.SetTargetParameterValue(parameterValue);
@@ -66,11 +51,11 @@ namespace EngChallange
 
         private void Select_Click(object sender, RoutedEventArgs e)
         {
-            // Obtém os valores dos campos de texto
+            //Get UI values
             string parameterName = ParamaterNameTextBox.Text.Trim();
             string parameterValue = ParameterValueTextBox.Text.Trim();
                         
-            // Verifica se o campo de nome do parâmetro foi preenchido
+            //Set the global variables and call SelectElementsWithParameter
             if (!string.IsNullOrEmpty(parameterName))
             {
                 parametersScannerCmd.SetTargetParameterName(parameterName);
@@ -78,7 +63,7 @@ namespace EngChallange
                 parametersScannerCmd.SelectElementsWithParameter(_doc, _uidoc, elementsWithParameter);
             }
 
-            // Verifica se o campo de valor do parâmetro foi preenchido
+            //Set the global variables and call GetByParameterValue
             if (!string.IsNullOrEmpty(parameterValue))
             {
                 parametersScannerCmd.SetTargetParameterValue(parameterValue);
@@ -87,7 +72,6 @@ namespace EngChallange
 
             Close();
         }
-
 
     }
 }
