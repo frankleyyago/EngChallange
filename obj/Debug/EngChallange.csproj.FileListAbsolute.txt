@@ -1,0 +1,13 @@
+D:\Desktop\BIMDev\EngChallange\bin\Debug\EngChallange.dll
+D:\Desktop\BIMDev\EngChallange\bin\Debug\EngChallange.pdb
+D:\Desktop\BIMDev\EngChallange\obj\Debug\EngChallange.csproj.AssemblyReference.cache
+D:\Desktop\BIMDev\EngChallange\obj\Debug\EngChallange.csproj.CoreCompileInputs.cache
+D:\Desktop\BIMDev\EngChallange\obj\Debug\EngChallange.dll
+D:\Desktop\BIMDev\EngChallange\obj\Debug\EngChallange.pdb
+D:\Desktop\BIMDev\EngChallange\bin\Debug\Resources\Icon.ico
+D:\Desktop\BIMDev\EngChallange\bin\Debug\Utilities\EngChallange.addin
+D:\Desktop\BIMDev\EngChallange\obj\Debug\UI.g.cs
+D:\Desktop\BIMDev\EngChallange\obj\Debug\EngChallange_MarkupCompile.cache
+D:\Desktop\BIMDev\EngChallange\obj\Debug\EngChallange_MarkupCompile.lref
+D:\Desktop\BIMDev\EngChallange\obj\Debug\UI.baml
+D:\Desktop\BIMDev\EngChallange\obj\Debug\EngChallange.g.resources

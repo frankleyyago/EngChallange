@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>EngChallange</Name>
+		<Assembly>EngChallange/EngChallange.dll</Assembly>
+		<AddInId>7031FE97-7126-4039-AE92-CF922E041BE9</AddInId>
+		<FullClassName>EngChallange.App</FullClassName>
+		<Text>App</Text>
+		<Description>Create a tab and buttons</Description>
+		<VendorId>Frankleyyago</VendorId>
+		<VendorDescription>github.com/frankleyyago</VendorDescription>
+	</AddIn>
+</RevitAddIns>
